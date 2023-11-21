@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listado</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="personas">
+    <ion-item *ngFor="let persona of personas">
+      <ion-avatar slot="start">
+        <img [src]="persona.foto" />
+      </ion-avatar>
+      <ion-label>{{persona.nombre}}</ion-label>
+      <ion-label>{{persona. apellido}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <div>
+    <ion-img src="/assets/icon/logo.png"></ion-img>
+  </div>
+</ion-content>

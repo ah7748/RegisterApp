@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Registro de Profesor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" name="nombre" [(ngModel)]="nombre" required></ion-input>
+  </ion-item>
+  <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error-message">
+    <p>{{ errorMessages.nombre.required }}</p>
+  </div>
+
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input type="text" name="apellido" [(ngModel)]="apellido" required></ion-input>
+  </ion-item>
+  <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="errorMessage">
+    <p>{{ errorMessages.apellido.required }}</p>
+  </div>
+
+  <ion-item>
+    <ion-label position="floating">Correo Electrónico</ion-label>
+    <ion-input type="email" name="correo" [(ngModel)]="correo" required></ion-input>
+  </ion-item>
+  <div *ngIf="correo.invalid && (correo.dirty || correo.touched)" class="errorMessage">
+    <p>{{ errorMessages.correo.required }}</p>
+    <p>{{ errorMessages.correo.pattern }}</p>
+  </div>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" name="contrasena" [(ngModel)]="contrasena" required></ion-input>
+  </ion-item>
+  <div *ngIf="contrasena.invalid && (contrasena.dirty || contrasena.touched)" class="errorMessage">
+    <p>{{ errorMessages.contrasena.required }}</p>
+  </div>
+
+  <ion-item>
+    <ion-label position="floating">Código de Profesor</ion-label>
+    <ion-input type="text" name="codigo" [(ngModel)]="codigo" disabled></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="registrar()">Registrar</ion-button>
+</ion-content>

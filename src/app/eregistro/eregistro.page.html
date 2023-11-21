@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrarse como:</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+  <ion-button [routerLink]="['/registro-profesor']" color="danger">
+    <ion-icon slot="icon-only" name="people-outline"></ion-icon>
+    profesor
+  </ion-button>
+  <br>
+  <br>
+  <br>
+  <ion-button [routerLink]="['/registro-alumno']" color="danger">
+    <ion-icon slot="icon-only" name="people-outline"></ion-icon>
+    Alumno 
+  </ion-button>
+  </div>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button><ion-icon name="code"></ion-icon></ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button [routerLink]="['/home']"><ion-icon name="arrow-back-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <div>
+    <ion-img src="/assets/icon/logo.png"></ion-img>
+  </div>
+</ion-content>
