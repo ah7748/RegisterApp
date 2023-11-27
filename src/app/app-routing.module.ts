@@ -48,14 +48,6 @@ loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
     loadChildren: () => import('./pinicio/pinicio.module').then( m => m.PinicioPageModule)
   },
   {
-    path: 'aregistro',
-    loadChildren: () => import('./aregistro/aregistro.module').then( m => m.AregistroPageModule)
-  },
-  {
-    path: 'pregistro',
-    loadChildren: () => import('./pregistro/pregistro.module').then( m => m.PregistroPageModule)
-  },
-  {
     path: 'olvidar',
     loadChildren: () => import('./olvidar/olvidar.module').then( m => m.OlvidarPageModule)
   },
@@ -70,14 +62,6 @@ loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   {
     path: 'codigoqr',
     loadChildren: () => import('./codigoqr/codigoqr.module').then( m => m.CodigoqrPageModule)
-  },
-  {
-    path: 'registro-profesor',
-    loadChildren: () => import('./registro-profesor/registro-profesor.module').then( m => m.RegistroProfesorPageModule)
-  },
-  {
-    path: 'registro-alumno',
-    loadChildren: () => import('./registro-alumno/registro-alumno.module').then( m => m.RegistroAlumnoPageModule)
   },
   {
     path: 'inicio-sesion',

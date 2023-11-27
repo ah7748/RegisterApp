@@ -1,18 +1,22 @@
 {
-  "alumno": [
+  "usuarios": [
     {
+      "id": 1,
       "nombre": "Javier",
       "apellido": "Cuevas",
       "correo": "jav.cuevas@duocuc.cl",
       "contrasena": "1",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Adolf_Hitler_cropped_restored.jpg/220px-Adolf_Hitler_cropped_restored.jpg"
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Adolf_Hitler_cropped_restored.jpg/220px-Adolf_Hitler_cropped_restored.jpg",
+      "rol": "alumno"
     },
     {
+      "id": 2,
       "nombre": "Matias",
       "apellido": "Maldonado",
       "correo": "mat.maldonado@duocuc.cl",
       "contrasena": "12",
-      "foto": ""
+      "foto": "",
+      "rol": "alumno"
     },
     {
       "id": 3,
@@ -20,7 +24,8 @@
       "apellido": "Alfaro",
       "correo": "jer.alfaro@duocuc.cl",
       "contrasena": "123",
-      "foto": "https://img2.rtve.es/v/3806659/?w=1600"
+      "foto": "https://img2.rtve.es/v/3806659/?w=1600",
+      "rol": "alumno"
     },
     {
       "id": 4,
@@ -28,61 +33,71 @@
       "apellido": "Calderon",
       "correo": "and.calderon@duocuc.cl",
       "contrasena": "1234",
-      "foto": "https://historia.nationalgeographic.com.es/medio/2019/05/28/john-f-kennedy_79f14e9c_748x970.jpg"
+      "foto": "https://historia.nationalgeographic.com.es/medio/2019/05/28/john-f-kennedy_79f14e9c_748x970.jpg",
+      "rol": "alumno"
     },
     {
+      "id": 5,
       "nombre": "Gonzalo",
       "apellido": "Hugete",
       "correo": "gon.hufete@duocuc.cl",
       "contrasena": "12345",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Kim_Jong-un_April_2019_%28cropped%29.jpg"
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Kim_Jong-un_April_2019_%28cropped%29.jpg",
+      "rol": "alumno"
     },
     {
+      "id": 6,
       "nombre": "Diego",
       "apellido": "Alvarez",
       "correo": "die.alvarez@duocuc.cl",
       "contrasena": "123456",
-      "foto": "https://www.telesurtv.net/export/sites/telesur/img/2021/09/08/mao_tse_tung_legado.jpg_922143560.jpg"
+      "foto": "https://www.telesurtv.net/export/sites/telesur/img/2021/09/08/mao_tse_tung_legado.jpg_922143560.jpg",
+      "rol": "alumno"
     },
     {
+      "id": 7,
       "nombre": "Luis",
       "apellido": "Diaz",
       "correo": "lui.diaz@duocuc.cl",
       "contrasena": "1234567",
-      "foto": ""
+      "foto": "",
+      "rol": "alumno"
     },
     {
+      "id": 8,
       "nombre": "Patricio",
       "apellido": "Yañez",
       "correo": "pat.yanez@duocuc.cl",
       "contrasena": "12345678",
-      "foto": "https://cdn.britannica.com/97/124897-050-4EEA2438/Fidel-Castro-2003.jpg"
+      "foto": "https://cdn.britannica.com/97/124897-050-4EEA2438/Fidel-Castro-2003.jpg",
+      "rol": "alumno"
     },
     {
+      "id": 9,
       "nombre": "Roberto",
       "apellido": "Manfinfla",
       "correo": "rob.manfinfla@duocuc.cl",
       "contrasena": "123456789",
-      "foto": "https://static.theclinic.cl/media/2020/10/manfinfla-yt.png"
-    }
-  ],
-  "profesor": [
+      "foto": "https://static.theclinic.cl/media/2020/10/manfinfla-yt.png",
+      "rol": "alumno"
+    },
     {
+      "id": 10,
       "nombre": "q",
       "apellido": "q",
       "correo": "aaa.aaa@profesor.duoc.cl",
       "contrasena": "1",
-      "codigo": ""
-    }
-  ],
-  "login": [
-    {
-      "correo": "aaa.aaa@profesor.duoc.cl",
-      "contrasena": "1"
+      "codigo": "",
+      "rol": "profesor"
     },
     {
-      "correo": "and.calderon@duocuc.cl",
-      "contrasena": "1"
+      "id": 11,
+      "nombre": "alo",
+      "apellido": "kfc",
+      "correo": "alo.kfc@profesor.duoc.cl",
+      "contrasena": "1",
+      "codigo": "",
+      "rol": "profesor"
     }
   ]
 }
