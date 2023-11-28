@@ -46,15 +46,7 @@ loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   {
     path: 'inicio-sesion',
     loadChildren: () => import('./inicio-sesion/inicio-sesion.module').then( m => m.InicioSesionPageModule)
-  },
-  {
-    path: 'alumno',
-    loadChildren: () => import('./alumno/alumno.module').then( m => m.AlumnoPageModule)
-  },
-  {
-    path: 'profesor',
-    loadChildren: () => import('./profesor/profesor.module').then( m => m.ProfesorPageModule)
-  },
+  }
 ];
 
 @NgModule({
