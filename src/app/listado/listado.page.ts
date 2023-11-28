@@ -17,7 +17,7 @@ export class ListadoPage implements OnInit {
   }
 
   getData() {
-    this.http.get('http://localhost:3000/alumno').subscribe((data: any) => {
+    this.http.get('http://localhost:3000/usuarios').subscribe((data: any) => {
       this.personas = data;
     });
   }

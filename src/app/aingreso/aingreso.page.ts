@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
 import { LoadingController, ToastController } from '@ionic/angular';
 import jsQR from 'jsqr';
-import { NgModule } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-aingreso',
@@ -19,8 +19,9 @@ export class AingresoPage implements OnInit {
   canvasElement: any;
   canvasContext: any;
   loading: HTMLIonLoadingElement;
+  nombreAlumno: string;
 
-  constructor(private barcodeScanner: BarcodeScanner, private toastCtrl: ToastController, private loadingCtrl: LoadingController) { }
+  constructor(private barcodeScanner: BarcodeScanner, private toastCtrl: ToastController, private loadingCtrl: LoadingController, private authService: AuthService) { }
 
   ngAfterViewInit() {
     this.videoElement = this.video.nativeElement;
@@ -28,7 +29,9 @@ export class AingresoPage implements OnInit {
     this.canvasContext = this.canvasElement.getContext('2d');
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.nombreAlumno = this.authService.getNombreAlumno();
+  }
 
   async startScan() {
     const stream = await navigator.mediaDevices.getUserMedia({

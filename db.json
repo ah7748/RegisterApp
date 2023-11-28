@@ -83,21 +83,53 @@
     },
     {
       "id": 10,
-      "nombre": "q",
-      "apellido": "q",
-      "correo": "aaa.aaa@profesor.duoc.cl",
+      "nombre": "katherine",
+      "apellido": "joestar",
+      "correo": "kat.joestar@profesor.duoc.cl",
       "contrasena": "1",
       "codigo": "",
-      "rol": "profesor"
+      "rol": "profesor",
+      "clases": ["matematicas I", "estadistica descriptiva"]
     },
     {
       "id": 11,
-      "nombre": "alo",
-      "apellido": "kfc",
-      "correo": "alo.kfc@profesor.duoc.cl",
+      "nombre": "javier",
+      "apellido": "cavernas",
+      "correo": "jav.caverna@profesor.duoc.cl",
       "contrasena": "1",
       "codigo": "",
-      "rol": "profesor"
+      "rol": "profesor",
+      "clases": ["programacion BDD", "programacion de algoritmos"]
+    },
+    {
+      "id": 12,
+      "nombre": "thiare",
+      "apellido": "gonzales",
+      "correo": "thi.gonzales@profesor.duoc.cl",
+      "contrasena": "1",
+      "codigo": "",
+      "rol": "profesor",
+      "clases": ["Diseño web", "Javascript"]
+    },
+    {
+      "id": 13,
+      "nombre": "Andres",
+      "apellido": "Calderon",
+      "correo": "and.calderon@profesor.duoc.cl",
+      "contrasena": "1",
+      "codigo": "",
+      "rol": "profesor",
+      "clases": ["programacion BDD", "Javascript"]
+    },
+    {
+      "id": 12,
+      "nombre": "Mario",
+      "apellido": "perez",
+      "correo": "mar.perez@profesor.duoc.cl",
+      "contrasena": "1",
+      "codigo": "",
+      "rol": "profesor",
+      "clases": ["matematica I", "programacion de algoritmos"]
     }
   ]
 }
