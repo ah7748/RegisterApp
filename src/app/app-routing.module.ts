@@ -16,10 +16,6 @@ loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
     
   },
   {
-    path: 'segunda',
-    loadChildren: () => import('./segunda/segunda.module').then( m => m.SegundaPageModule)
-  },
-  {
     path: 'registro',
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
@@ -28,24 +24,8 @@ loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
     loadChildren: () => import('./listado/listado.module').then( m => m.ListadoPageModule)
   },
   {
-    path: 'notas',
-    loadChildren: () => import('./notas/notas.module').then( m => m.NotasPageModule)
-  },
-  {
     path: 'einicios',
     loadChildren: () => import('./einicios/einicios.module').then( m => m.EiniciosPageModule)
-  },
-  {
-    path: 'eregistro',
-    loadChildren: () => import('./eregistro/eregistro.module').then( m => m.EregistroPageModule)
-  },
-  {
-    path: 'ainico',
-    loadChildren: () => import('./ainico/ainico.module').then( m => m.AinicoPageModule)
-  },
-  {
-    path: 'pinicio',
-    loadChildren: () => import('./pinicio/pinicio.module').then( m => m.PinicioPageModule)
   },
   {
     path: 'olvidar',
