@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { NavController } from '@ionic/angular';
+import * as QRCode from 'qrcode';
+
 
 @Component({
   selector: 'app-pingreso',
@@ -60,17 +62,18 @@ export class PingresoPage implements OnInit {
       clase.expandido = !clase.expandido;
     }
   }
+  
 
   constructor(private authService: AuthService, private navCtrl: NavController) {}
 
-
+  
   ngOnInit() {
     this.profesorActual = this.authService.getUsuarioActual();
     console.log(this.profesorActual);
   }
-  generarQR(clase: any) {
+  generarQR(claseNombre: string, seccion: string) {
     // Puedes pasar información adicional a la página de generación de QR si es necesario
-    this.navCtrl.navigateForward(['/generar-qr', { claseNombre: clase.nombre, seccion: clase.seccion }]);
+    this.navCtrl.navigateForward(['/generar-qr', { claseNombre, seccion }]);
   }
 
 }

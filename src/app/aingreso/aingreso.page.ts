@@ -3,6 +3,7 @@ import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
 import { LoadingController, ToastController } from '@ionic/angular';
 import jsQR from 'jsqr';
 import { AuthService } from '../services/auth.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-aingreso',
@@ -21,7 +22,7 @@ export class AingresoPage implements OnInit {
   loading: HTMLIonLoadingElement;
   nombreAlumno: string;
 
-  constructor(private barcodeScanner: BarcodeScanner, private toastCtrl: ToastController, private loadingCtrl: LoadingController, private authService: AuthService) { }
+  constructor(private barcodeScanner: BarcodeScanner, private toastCtrl: ToastController, private loadingCtrl: LoadingController, private authService: AuthService, private http: HttpClient) { }
 
   ngAfterViewInit() {
     this.videoElement = this.video.nativeElement;
@@ -100,11 +101,30 @@ export class AingresoPage implements OnInit {
       position: 'top',
       buttons: [{
         text: 'Open',
-        handler: () => {
+        handler: async () => {
+          await this.registerAttendance();  // Llama a la función para registrar asistencia
           window.open(this.scanResult, '_system', 'location=yes');
         }
       }]
     });
     toast.present();
   }
+
+  async registerAttendance() {
+    try {
+      // Aquí debes construir el objeto que se enviará al servidor (json-server)
+      const attendanceData = {
+        studentName: this.nombreAlumno,
+        dateTime: new Date().toISOString()  // Puedes ajustar el formato según tus necesidades
+      };
+
+      // Realiza la petición HTTP al servidor (json-server) para registrar la asistencia
+      const apiUrl = 'http://localhost:3000/asistencias';  // Reemplaza con tu URL de json-server
+      await this.http.post(apiUrl, attendanceData).toPromise();
+
+      console.log('Asistencia registrada correctamente.');
+    } catch (error) {
+      console.error('Error al registrar la asistencia:', error);
+    }
+ }
 }

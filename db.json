@@ -1,5 +1,4 @@
 {
-  
   "usuarios": [
     {
       "id": 1,
@@ -93,11 +92,16 @@
       "clases": [
         {
           "nombre": "matematica I",
-          "secciones": ["001"] 
-        }, 
+          "secciones": [
+            "001"
+          ]
+        },
         {
           "nombre": "estadistica descriptiva",
-          "secciones": ["001","002"]
+          "secciones": [
+            "001",
+            "002"
+          ]
         }
       ]
     },
@@ -112,11 +116,15 @@
       "clases": [
         {
           "nombre": "programacion BDD",
-          "secciones":["001"]
+          "secciones": [
+            "001"
+          ]
         },
         {
-          "nombre":"programacion de algoritmos",
-          "secciones":["002"]
+          "nombre": "programacion de algoritmos",
+          "secciones": [
+            "002"
+          ]
         }
       ]
     },
@@ -131,11 +139,16 @@
       "clases": [
         {
           "nombre": "Diseño web",
-          "secciones":["001","002"]
+          "secciones": [
+            "001",
+            "002"
+          ]
         },
         {
-          "nombre":"Javascript",
-          "secciones":["001"]
+          "nombre": "Javascript",
+          "secciones": [
+            "001"
+          ]
         }
       ]
     },
@@ -150,11 +163,15 @@
       "clases": [
         {
           "nombre": "programacion BDD",
-          "secciones":["002"]
+          "secciones": [
+            "002"
+          ]
         },
         {
           "nombre": "Javascript",
-          "secciones":["002"]
+          "secciones": [
+            "002"
+          ]
         }
       ]
     },
@@ -168,41 +185,69 @@
       "rol": "profesor",
       "clases": [
         {
-          "nombre":"matematica I",
-          "secciones": ["002"]
+          "nombre": "matematica I",
+          "secciones": [
+            "002"
+          ]
         },
         {
           "nombre": "programacion de algoritmos",
-          "secciones": ["001"]
+          "secciones": [
+            "001"
+          ]
         }
       ]
     }
   ],
-  "clases":[
+  "clases": [
     {
-      "nombre":"matematica I",
-      "secciones":["001","002"]
+      "nombre": "matematica I",
+      "secciones": [
+        "001",
+        "002"
+      ]
     },
     {
-      "nombre":"Diseño web",
-      "secciones":["001","002"]
+      "nombre": "Diseño web",
+      "secciones": [
+        "001",
+        "002"
+      ]
     },
     {
-      "nombre":"Javascript",
-      "secciones":["001","002"]
+      "nombre": "Javascript",
+      "secciones": [
+        "001",
+        "002"
+      ]
     },
     {
-      "nombre":"programacion BDD",
-      "secciones":["001","002"]
+      "nombre": "programacion BDD",
+      "secciones": [
+        "001",
+        "002"
+      ]
     },
     {
-      "nombre":"programacion de algoritmos",
-      "secciones":["001","002"]
+      "nombre": "programacion de algoritmos",
+      "secciones": [
+        "001",
+        "002"
+      ]
     },
     {
-      "nombre":"estadistica descriptiva",
-      "secciones":["001","002"]
+      "nombre": "estadistica descriptiva",
+      "secciones": [
+        "001",
+        "002"
+      ]
     }
-]
-  
+  ],
+  "asistencias": [
+    {
+      "studentName": "Andres",
+      "dateTime": "2023-11-29T21:29:54.575Z",
+      "id": 1
+    }
+  ]
 }

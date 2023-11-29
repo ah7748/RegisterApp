@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text="center" >generarQR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="primary">
+  </ion-text>
+  <div class="datos">
+    <input type="text" [(ngModel)]="texto" class="full-width-input" readonly>
+  </div>
+    <br><br>
+  <qrcode [qrdata]="texto" [width]="300"></qrcode>
+  <div>
+    <ion-img src="/assets/icon/logo.png"></ion-img>
+  </div>
+</ion-content>

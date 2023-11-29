@@ -46,7 +46,11 @@ loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   {
     path: 'inicio-sesion',
     loadChildren: () => import('./inicio-sesion/inicio-sesion.module').then( m => m.InicioSesionPageModule)
+  },  {
+    path: 'generar-qr',
+    loadChildren: () => import('./generar-qr/generar-qr.module').then( m => m.GenerarQRPageModule)
   }
+
 ];
 
 @NgModule({
