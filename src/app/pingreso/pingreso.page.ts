@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pingreso',
@@ -13,7 +14,7 @@ export class PingresoPage implements OnInit {
       nombre: 'Mario',
       apellido: 'Perez',
       clases: [
-        { nombre: 'Matemática I', seccion: '001' },
+        { nombre: 'Matemática I', seccion: '002' },
         { nombre: 'Programación de Algoritmos', seccion: '001' }
       ]
     },
@@ -22,7 +23,7 @@ export class PingresoPage implements OnInit {
       apellido: 'joestar',
       clases: [
         {nombre: 'matematicas I', seccion: '002'},
-        {nombre: 'estadistica descriptiva', seccion: '001'}
+        {nombre: 'estadistica descriptiva', seccion: ['001','002']}
      ]
     },
     {
@@ -50,10 +51,26 @@ export class PingresoPage implements OnInit {
     }
   ];
 
-  constructor(private authService: AuthService) {}
+  toggleClase(clase: any) {
+    if (typeof clase === 'string') {
+      // Tratar como una cadena, tal vez mostrar un mensaje de error
+      console.error('Error: se esperaba un objeto, pero se recibió una cadena.');
+    } else {
+      // Tratar como un objeto
+      clase.expandido = !clase.expandido;
+    }
+  }
+
+  constructor(private authService: AuthService, private navCtrl: NavController) {}
+
 
   ngOnInit() {
     this.profesorActual = this.authService.getUsuarioActual();
     console.log(this.profesorActual);
   }
+  generarQR(clase: any) {
+    // Puedes pasar información adicional a la página de generación de QR si es necesario
+    this.navCtrl.navigateForward(['/generar-qr', { claseNombre: clase.nombre, seccion: clase.seccion }]);
+  }
+
 }

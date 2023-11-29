@@ -1,4 +1,5 @@
 {
+  
   "usuarios": [
     {
       "id": 1,
@@ -89,7 +90,16 @@
       "contrasena": "1",
       "codigo": "",
       "rol": "profesor",
-      "clases": ["matematicas I", "estadistica descriptiva"]
+      "clases": [
+        {
+          "nombre": "matematica I",
+          "secciones": ["001"] 
+        }, 
+        {
+          "nombre": "estadistica descriptiva",
+          "secciones": ["001","002"]
+        }
+      ]
     },
     {
       "id": 11,
@@ -99,7 +109,16 @@
       "contrasena": "1",
       "codigo": "",
       "rol": "profesor",
-      "clases": ["programacion BDD", "programacion de algoritmos"]
+      "clases": [
+        {
+          "nombre": "programacion BDD",
+          "secciones":["001"]
+        },
+        {
+          "nombre":"programacion de algoritmos",
+          "secciones":["002"]
+        }
+      ]
     },
     {
       "id": 12,
@@ -109,7 +128,16 @@
       "contrasena": "1",
       "codigo": "",
       "rol": "profesor",
-      "clases": ["Diseño web", "Javascript"]
+      "clases": [
+        {
+          "nombre": "Diseño web",
+          "secciones":["001","002"]
+        },
+        {
+          "nombre":"Javascript",
+          "secciones":["001"]
+        }
+      ]
     },
     {
       "id": 13,
@@ -119,7 +147,16 @@
       "contrasena": "1",
       "codigo": "",
       "rol": "profesor",
-      "clases": ["programacion BDD", "Javascript"]
+      "clases": [
+        {
+          "nombre": "programacion BDD",
+          "secciones":["002"]
+        },
+        {
+          "nombre": "Javascript",
+          "secciones":["002"]
+        }
+      ]
     },
     {
       "id": 12,
@@ -129,7 +166,43 @@
       "contrasena": "1",
       "codigo": "",
       "rol": "profesor",
-      "clases": ["matematica I", "programacion de algoritmos"]
+      "clases": [
+        {
+          "nombre":"matematica I",
+          "secciones": ["002"]
+        },
+        {
+          "nombre": "programacion de algoritmos",
+          "secciones": ["001"]
+        }
+      ]
     }
-  ]
+  ],
+  "clases":[
+    {
+      "nombre":"matematica I",
+      "secciones":["001","002"]
+    },
+    {
+      "nombre":"Diseño web",
+      "secciones":["001","002"]
+    },
+    {
+      "nombre":"Javascript",
+      "secciones":["001","002"]
+    },
+    {
+      "nombre":"programacion BDD",
+      "secciones":["001","002"]
+    },
+    {
+      "nombre":"programacion de algoritmos",
+      "secciones":["001","002"]
+    },
+    {
+      "nombre":"estadistica descriptiva",
+      "secciones":["001","002"]
+    }
+]
+  
 }

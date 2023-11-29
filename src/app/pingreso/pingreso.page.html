@@ -4,24 +4,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-  <div *ngIf="profesorActual">
-    <ion-list *ngIf="profesorActual.clases && profesorActual.clases.length > 0; else noClasses">
-      <ion-item-group *ngFor="let clase of profesorActual.clases">
-        <ion-item-divider>
-          {{ clase.nombre }}
-        </ion-item-divider>
-        <ion-item *ngFor="let seccion of clase.secciones">
-          <ion-label>Sección {{ seccion }}</ion-label>
-          <ion-button (click)="generarCodigoQR(clase.nombre, seccion)">Generar QR</ion-button>
-        </ion-item>
-      </ion-item-group>
+<ion-content class="ion-padding">
+  <ng-container *ngIf="profesorActual">
+    <ion-list *ngFor="let clase of profesorActual.clases">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ clase.nombre }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list *ngIf="clase.secciones.length > 0">
+            <ion-item *ngFor="let seccion of clase.secciones">
+              <ion-label>Sección: {{ seccion }}</ion-label>
+            </ion-item>
+          </ion-list>
+          <ion-button expand="full" (click)="generarQR(clase)">Generar QR</ion-button>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
-    <ng-template #noClasses>
-      <p>El profesor no tiene clases asignadas.</p>
-    </ng-template>
-  </div>
+  </ng-container>
 
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button><ion-icon name="code"></ion-icon></ion-fab-button>
@@ -32,5 +32,4 @@
   <div>
     <ion-img src="/assets/icon/logo.png"></ion-img>
   </div>
-
 </ion-content>
